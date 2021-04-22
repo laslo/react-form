@@ -6,11 +6,14 @@ const fields = [
     {prop: 'login', caption: 'Login / Email'},
     {prop: 'email', caption: 'Email'}
 ];
+const onSubmit = (values) => {
+    console.log('Posting ', values);
+}
 const element = (
     <div>
         <h1>react-form</h1>
         <h2>Basic Example</h2>
-        <Form fields={fields} button="Sign in"/>
+        <Form fields={fields} button="Sign in" onSubmit={onSubmit}/>
     </div>
 );
 
