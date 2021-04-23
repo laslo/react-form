@@ -4,7 +4,6 @@ Form Builder based on key-value config as a ReactJS component
 ## Backlog
 - add up field prefixes/postfixes (https://material-ui.com/components/text-fields/#input-adornments)
 - integrate font awesome icons
-- add password field type
 - add checkbox, radio field types
 - add field tip below, and placeholder, disabled prop
 - several fields in line and fields groups
