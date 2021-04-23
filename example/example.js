@@ -3,17 +3,48 @@ import ReactDOM from 'react-dom';
 import Form from '../index';
 
 const fields = [
-    {prop: 'login', caption: 'Login / Email'},
-    {prop: 'email', caption: 'Email'}
+    {prop: 'firstname', caption: 'First name', className: 'col-sm-6'},
+    {prop: 'lastname', caption: 'Last name', className: 'col-sm-6'},
+    {prop: 'username', caption: 'Username', placeholder: '@'},
+    {prop: 'password', type: 'password', caption: 'Password'},
+    {prop: 'email', type: 'email', caption: 'Email'},
+    {prop: 'region', type: 'select', caption: 'Region', 
+        options: ['America', 'Asia Pacific', 'Europe', 'Middle East/Africa']},
+    {prop: 'bio', type: 'textarea', caption: 'A few words about you'},
+    {prop: 'terms', type: 'radio', caption: 'Payment option', options: [
+        {caption: 'Credit card'},
+        {caption: 'Bank wire'},
+        {caption: 'PayPal'},
+    ]},
+    {prop: 'newsletter', type: 'switch', options: [
+        {caption: 'Subscribe on monthly newsletter'},
+    ]},
+    {prop: 'terms', type: 'checkbox', options: [
+        {caption: 'I accept Terms & Conditions'},
+    ]},
 ];
-const onSubmit = (values) => {
+const errors = {};
+const onSubmit = (values, onReady) => {
     console.log('Posting ', values);
+    setTimeout(() => {
+        // console.log('Done');
+        errors.email = 'Wrong email format';
+        onReady();
+    }, 2000)
 }
 const element = (
-    <div>
-        <h1>react-form</h1>
-        <h2>Basic Example</h2>
-        <Form fields={fields} button="Sign in" onSubmit={onSubmit}/>
+    <div className="container">
+        <main>
+            <h1>Example of react-form</h1>
+            {/* <code></code> */}
+            <div className="row g-3">
+                <Form 
+                fields={fields}
+                button="Sign in"
+                onSubmit={onSubmit}
+                errors={errors}/>
+            </div>
+        </main>
     </div>
 );
 
