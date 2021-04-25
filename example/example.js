@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Form from '../index';
+import Form from '../src/Form';
 
 const fields = [
     {prop: 'firstname', caption: 'First name', className: 'col-sm-6'},
@@ -35,7 +35,8 @@ const onSubmit = (values, onReady) => {
 const element = (
     <div className="container">
         <main>
-            <h1>Example of react-form</h1>
+            <h1>react-pack examples</h1>
+            <h2>&lt;Form&gt;</h2>
             {/* <code></code> */}
             <div className="row g-3">
                 <Form 
