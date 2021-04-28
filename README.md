@@ -1,7 +1,8 @@
-# react-form
-Form Builder based on key-value config as a ReactJS component
+# react-pack
+Basic React Components
 
 ## Backlog
+### <Form> 
 - add up field prefixes/postfixes (https://material-ui.com/components/text-fields/#input-adornments)
 - integrate font awesome icons
 - add field tip below, and placeholder, disabled/checked/selected prop
