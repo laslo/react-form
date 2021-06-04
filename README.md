@@ -1,6 +1,18 @@
 # react-pack
 Basic React Components
 
+## Redux reducers
+
+```
+const mapStateToProps = state => {
+    return {
+        loading: createLoadingSelector(['SING_IN'])(state),
+        errors: createErrorSelector(['SING_IN'])(state),
+        status: createStatusSelector('SING_IN')(state),
+    };
+};
+```
+
 ## Backlog
 ### <Form> 
 - add up field prefixes/postfixes (https://material-ui.com/components/text-fields/#input-adornments)
